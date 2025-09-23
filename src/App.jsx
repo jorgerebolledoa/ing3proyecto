@@ -1,5 +1,5 @@
 import { Routes, Route } from 'react-router-dom';
-import {Home, Graph} from './pages';
+import {Home, Graph, Veintiuno} from './pages';
 import './App.css'
 
 function App() {
@@ -9,6 +9,8 @@ function App() {
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/graph" element={<Graph />} />
+        <Route path="/veintiuno" element={<Veintiuno />} />
+        <Route path="/21" element={<Veintiuno />} />
       </Routes>
     </div>
   )
