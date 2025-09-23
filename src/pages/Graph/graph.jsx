@@ -1,7 +1,12 @@
+import { Input } from "../../components";
 
 function Graph(){    
     return (
-        <div>Graph page</div>
+        <div>
+            <form action="">
+                <Input></Input>
+            </form>
+        </div>
     )
 }
 
