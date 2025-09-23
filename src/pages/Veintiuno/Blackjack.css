@@ -1,0 +1,192 @@
+/* Estilos específicos para el juego de Blackjack */
+
+/* Contenedor principal del juego */
+.blackjack-container {
+  background-color: #0f172a;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 1rem;
+}
+
+.blackjack-title {
+  font-size: 2.25rem;
+  text-align: center;
+  margin-bottom: 1rem;
+  color: white;
+}
+
+/* Estilos para botones del juego */
+.blackjack-button {
+  font-weight: 500;
+  padding: 0.5rem 1rem;
+  border-radius: 0.5rem;
+  box-shadow: 0 4px 6px -1px rgb(0 0 0 / 0.1), 0 2px 4px -2px rgb(0 0 0 / 0.1);
+  transition: all 150ms cubic-bezier(0.4, 0, 0.2, 1);
+  border: none;
+  cursor: pointer;
+  color: white;
+}
+
+.blackjack-button:disabled {
+  background-color: #9ca3af !important;
+  cursor: not-allowed;
+}
+
+.blackjack-button-green {
+  background-color: #22c55e;
+}
+
+.blackjack-button-green:hover:not(:disabled) {
+  background-color: #16a34a;
+}
+
+.blackjack-button-red {
+  background-color: #ef4444;
+}
+
+.blackjack-button-red:hover:not(:disabled) {
+  background-color: #dc2626;
+}
+
+.blackjack-button-blue {
+  background-color: #3b82f6;
+}
+
+.blackjack-button-blue:hover:not(:disabled) {
+  background-color: #2563eb;
+}
+
+/* Estilos para cartas */
+.card {
+  width: 5rem;
+  height: 7rem;
+  background-color: white;
+  border: 2px solid #d1d5db;
+  border-radius: 0.5rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0.5rem;
+  box-shadow: 0 4px 6px -1px rgb(0 0 0 / 0.1), 0 2px 4px -2px rgb(0 0 0 / 0.1);
+  margin: 0.25rem;
+}
+
+.card-back {
+  width: 5rem;
+  height: 7rem;
+  background-color: #1e40af;
+  border: 2px solid white;
+  border-radius: 0.5rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  font-weight: bold;
+  box-shadow: 0 4px 6px -1px rgb(0 0 0 / 0.1), 0 2px 4px -2px rgb(0 0 0 / 0.1);
+}
+
+.card-value {
+  font-size: 0.875rem;
+  font-weight: 700;
+}
+
+.card-suit {
+  font-size: 1.875rem;
+}
+
+.card-red {
+  color: #dc2626;
+}
+
+.card-black {
+  color: black;
+}
+
+.card-value-top {
+  align-self: flex-start;
+}
+
+.card-value-bottom {
+  align-self: flex-end;
+  transform: rotate(180deg);
+}
+
+/* Layout del juego */
+.blackjack-actions {
+  display: flex;
+  justify-content: space-around;
+  gap: 0.5rem;
+  margin-top: 1rem;
+}
+
+.blackjack-hands {
+  display: flex;
+  justify-content: space-around;
+}
+
+.blackjack-hand {
+  padding: 1rem;
+}
+
+.hand-title {
+  font-size: 1.5rem;
+  margin-bottom: 0.5rem;
+  background-color: white;
+  color: #0f172a;
+  font-weight: 500;
+  padding: 0.5rem 0.75rem;
+  border-radius: 0.375rem;
+}
+
+.hand-score {
+  font-weight: 500;
+  margin-bottom: 0.25rem;
+  color: white;
+}
+
+.hand-cards {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.25rem;
+}
+
+.hand-cards-row {
+  display: flex;
+  flex-direction: row;
+  gap: 0.25rem;
+}
+
+/* Resultado del juego */
+.blackjack-result {
+  color: white;
+  font-weight: bold;
+  border-radius: 0.375rem;
+  text-align: center;
+  margin-top: 1rem;
+  padding: 0.5rem;
+}
+
+.blackjack-result-player {
+  background-color: #059669;
+}
+
+.blackjack-result-dealer {
+  background-color: #b91c1c;
+}
+
+.blackjack-result-draw {
+  background-color: #6b7280;
+}
+
+.blackjack-result-message {
+  font-size: 1.5rem;
+}
+
+/* Responsive */
+@media (min-width: 640px) {
+  .hand-cards {
+    flex-direction: row;
+  }
+}
