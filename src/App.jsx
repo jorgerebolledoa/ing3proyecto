@@ -9,7 +9,6 @@ function App() {
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/graph" element={<Graph />} />
-        <Route path="/veintiuno" element={<Veintiuno />} />
         <Route path="/21" element={<Veintiuno />} />
       </Routes>
     </div>
