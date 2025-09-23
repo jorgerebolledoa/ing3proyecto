@@ -31,8 +31,8 @@ const TrollButton = () => {
   const handleMouseEnter = () => {
     if (isCaught) return;
     
-    // El botón se escapa un número aleatorio de veces (entre 1 y 5)
-    const escapesNeeded = Math.floor(Math.random() * 5) + 1;
+    // El botón se escapa un número aleatorio de veces (entre 5 y 10)
+    const escapesNeeded = Math.floor(Math.random() * 10) + 5;
     
     if (escapeCount < escapesNeeded) {
       setEscapeCount(prev => prev + 1);
@@ -95,7 +95,7 @@ const TrollButton = () => {
         </div>
         
         <div className="mt-6 text-xs text-gray-500">
-          <p>Pista: El botón se escapará entre 1 y 5 veces antes de dejarse atrapar</p>
+          <p>Pista: El botón se escapará entre 5 y 10 veces antes de dejarse atrapar</p>
         </div>
       </div>
     </div>
