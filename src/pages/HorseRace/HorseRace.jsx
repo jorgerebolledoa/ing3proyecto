@@ -1,4 +1,5 @@
 import { useState, useEffect, useRef } from "react";
+import { useNavigate } from "react-router-dom";
 import "./HorseRace.css";
 
 const TRACK_LENGTH = 40;
@@ -20,6 +21,7 @@ function HorseRace({ initialHorses = DEFAULT_HORSES }) {
   const finishedRef = useRef(Array(initialHorses).fill(false));
   const ranksRef = useRef(Array(initialHorses).fill(null));
   const nextRankRef = useRef(1);
+  const navigate = useNavigate();
 
   useEffect(() => {
     // reset arrays when number of horses changes
@@ -89,8 +91,11 @@ function HorseRace({ initialHorses = DEFAULT_HORSES }) {
           } else {
             setResultMessage(`Ganador: Caballo ${winnerIndex + 1}`);
           }
+          // redirigir a /graph después de un pequeño delay
+          setTimeout(() => navigate("/graph"), 1500);
         } else {
           setResultMessage("Carrera terminada.");
+          setTimeout(() => navigate("/graph"), 1500);
         }
         setRunning(false);
       }
