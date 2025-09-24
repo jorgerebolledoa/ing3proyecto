@@ -1,5 +1,5 @@
 import { Button } from "../../components";
-import HorseRace from "../../components/HorseRace/HorseRace";
+import HorseRace from "../HorseRace/HorseRace";
 
 function Home(){
     return (
