@@ -1,7 +1,6 @@
 import { Routes, Route } from 'react-router-dom';
 import {Home, Graph, Veintiuno, HorseRace} from './pages';
 import './App.css'
-import TrollButton from './Trollbutton';
 
 function App() {
 
@@ -14,7 +13,6 @@ function App() {
         <Route path="/21" element={<Veintiuno />} />
         <Route path="/horse" element={<HorseRace />} />
       </Routes>
-      <TrollButton />
     </div>
   )
 }

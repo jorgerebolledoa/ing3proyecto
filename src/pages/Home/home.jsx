@@ -1,12 +1,12 @@
-import { Button } from "../../components";
+import { Button, TrollButton } from "../../components";
 import HorseRace from "../HorseRace/HorseRace";
 
 function Home(){
     return (
-        <div style={{ padding: 16 }}>
-            <HorseRace initialHorses={5} />
-            <div style={{ marginTop: 20 }}>
-                <Button />
+        <div>
+            <div>
+                <Button type="submit" text="Grafico" navigate="/graph" />
+                <TrollButton />
             </div>
         </div>
     )
