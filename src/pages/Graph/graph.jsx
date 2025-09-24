@@ -86,6 +86,9 @@ function Graph() {
                     <Button type="submit" disabled={isLoading} text={isLoading ? "Generando..." : "Crear Gráfico"}></Button>
                 </div>
             </form>
+            <div className="mt-10">
+                <Button type="submit" navigate="/" text={"Home"}></Button>
+            </div>
             <div style={{ marginTop: '20px', textAlign: 'center' }}>
                 {isLoading && <p>Cargando gráfico...</p>}
                 {loadError && <p style={{ color: 'red' }}>Error: {loadError}</p>}
