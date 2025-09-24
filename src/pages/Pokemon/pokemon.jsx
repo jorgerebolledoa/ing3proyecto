@@ -186,14 +186,18 @@ export default function PokemonGame() {
   };
 
   const handleChoice = (name, idx) => {
+    if (selected !== null) return;
     setSelected(idx);
+    setMainClass("revealed");
+
     if (name !== gameData.correct.name) {
+      // Si es incorrecto, espera 3 segundos y llama a handlePlay
       setTimeout(() => {
         handlePlay();
-        setSelected(null); // Opcional: limpia la selección
+        setSelected(null);
+        setMainClass("fetching");
       }, 3000);
     }
-    // ...Aqui se podria enrutar al graficou
   };
 
   return (
