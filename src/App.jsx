@@ -1,7 +1,6 @@
 import { Routes, Route } from 'react-router-dom';
-import {Home, Graph, Pokemon} from './pages';
+import {Home, Graph, Pokemon, Veintiuno, HorseRace, GamesMenu} from './pages';
 import './App.css'
-import TrollButton from './Trollbutton';
 
 function App() {
 
@@ -11,9 +10,10 @@ function App() {
         <Route path="/" element={<Home />} />
         <Route path="/graph" element={<Graph />} />
         <Route path="/pokemon" element={<Pokemon />} />
+        <Route path="/21" element={<Veintiuno />} />
+        <Route path="/games" element={<GamesMenu />} />
+        <Route path="/horse" element={<HorseRace />} />
       </Routes>
-      <TrollButton />
-
     </div>
   )
 }

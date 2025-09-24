@@ -1,10 +1,13 @@
-import { Button } from "../../components";
+import { Button, TrollButton } from "../../components";
+import HorseRace from "../HorseRace/HorseRace";
 
 function Home(){
     return (
         <div>
-            <div>Home Page</div>
-            <Button></Button>
+            <div>
+                <Button type="submit" text="Grafico" navigate="/graph" />
+                <TrollButton />
+            </div>
         </div>
     )
 }

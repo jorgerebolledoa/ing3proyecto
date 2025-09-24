@@ -19,3 +19,4 @@ If you are developing a production application, we recommend using TypeScript wi
 `cd backend`
 `pip install -r requirements.txt`
 `python server.py`
+
