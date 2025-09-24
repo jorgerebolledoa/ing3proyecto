@@ -56,7 +56,7 @@ const TrollButton = () => {
   };
 
   return (
-    <div className="flex flex-col items-center justify-center min-h-screen bg-gradient-to-br from-purple-500 to-blue-600 p-6">
+    <div className="flex flex-col items-center justify-center rounded-2xl p-6">
       <div className="bg-white rounded-2xl shadow-2xl p-8 max-w-md w-full text-center">
         <h1 className="text-3xl font-bold text-gray-800 mb-2">Botón Troll</h1>
         <p className="text-gray-600 mb-6">¿Podrás hacer clic en el botón?</p>
