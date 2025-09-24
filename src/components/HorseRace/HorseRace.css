@@ -1,0 +1,121 @@
+:root{
+  --bg: #ffffff;
+  --track: #fafafa;
+  --horse: #111827;
+  --winner: #9c24ae; /* verde */
+  --selected: #f50ba7; /* ámbar */
+  --border: #e5e7eb;
+  --muted: #f3f4f6;
+}
+
+/* Aplicar las variables al <body> para que el tema afecte el fondo y el color del texto */
+body{
+  background: var(--bg);
+  color: var(--horse);
+}
+
+/* Si el usuario tiene preferencia de sistema en modo oscuro, usar paleta oscura por defecto */
+@media (prefers-color-scheme: dark) {
+  :root{
+    --bg: #0b1220;
+    --track: #071028;
+    --horse: #e6eef8;
+    --winner: #d334a6;
+    --selected: #bd2525;
+    --border: #1f2937;
+    --muted: #071028;
+  }
+
+  body{
+    background: var(--bg);
+    color: var(--horse);
+  }
+}
+
+.horse-race{
+  max-width: 900px;
+  margin: 1rem auto;
+  font-family: system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial;
+}
+
+.controls{
+  display:flex;
+  gap:12px;
+  align-items:center;
+  justify-content:center;
+  margin-bottom:8px;
+}
+
+.controls label select{
+  margin-left:6px;
+  padding:4px 6px;
+  border-radius:6px;
+  border:1px solid var(--border);
+}
+
+.controls button{
+  padding:6px 10px;
+  border-radius:6px;
+  border:1px solid var(--border);
+  background: rgb(145, 15, 172);
+  cursor:pointer;
+}
+
+.track{
+  font-family: monospace;
+  line-height: 1.6;
+}
+
+.horse-row{
+  display:flex;
+  align-items:center;
+  gap:8px;
+  margin-bottom:6px;
+}
+
+.horse-name{
+  width:120px;
+  text-align:right;
+  font-weight:500;
+}
+
+.horse-name.finished{
+  font-weight:700;
+  color: var(--winner);
+}
+
+.track-box{
+  white-space: pre;
+  background: var(--track);
+  padding: 4px 8px;
+  border-radius: 6px;
+  flex: 1;
+  border: 1px solid var(--border);
+}
+
+.horse-emoji{
+  font-weight:700;
+  color: var(--horse);
+}
+
+.horse-row.selected .horse-name{
+  color: var(--selected);
+  font-weight:700;
+}
+
+.horse-row.winner .horse-name{
+  color: var(--winner);
+  font-weight:800;
+}
+
+.result{
+  margin-top:12px;
+}
+
+.result-message{
+  margin-top:8px;
+  padding:8px;
+  background: var(--muted);
+  border-radius:6px;
+  border:1px solid var(--border);
+}
