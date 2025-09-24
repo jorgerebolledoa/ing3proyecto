@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from "react";
+import { useNavigate } from "react-router-dom";
 import { combinations } from "../../assets/CardDeck";
 import Results from "./components/Results.jsx";
 import Actions from "./components/Actions.jsx";
@@ -6,6 +7,8 @@ import Hands from "./components/Hands.jsx";
 import { calculateHandValue } from "./utility/calculateHandValue";
 
 function Game() {
+  const navigate = useNavigate();
+  
   // TODO: Create game state
   const [gameDeck, setGameDeck] = useState(combinations);
   const [playerHand, setPlayerHand] = useState([]);
@@ -34,6 +37,10 @@ function Game() {
     } else if (playerValue === 21) {
       handleGameOver({ type: "player", message: "Player wins!" });
       setScore({ ...score, player: score.player + 1 });
+      // Redireccionar al gráfico después de un breve delay
+      setTimeout(() => {
+        navigate("/graph");
+      }, 2000);
     }
   };
   // TODO: Player stand
@@ -47,6 +54,10 @@ function Game() {
     if (dealerValue > 21) {
       handleGameOver({ type: "player", message: "Dealer busts! Player wins!" });
       setScore({ ...score, player: score.player + 1 });
+      // Redireccionar al gráfico después de un breve delay
+      setTimeout(() => {
+        navigate("/graph");
+      }, 2000);
     }
   };
   // TODO: Reset game
@@ -67,6 +78,10 @@ function Game() {
 
     if (playerValue === 21) {
       handleGameOver({ type: "player", message: "Player wins!" });
+      // Redireccionar al gráfico después de un breve delay
+      setTimeout(() => {
+        navigate("/graph");
+      }, 2000);
     } else if (dealerValue === 21) {
       handleGameOver({ type: "dealer", message: "Dealer wins!" });
       setScore({ ...score, dealer: score.dealer + 1 });
@@ -77,6 +92,10 @@ function Game() {
         case playerValue === 21:
           setResult({ type: "player", message: "Player wins!" });
           setScore({ ...score, player: score.player + 1 });
+          // Redireccionar al gráfico después de un breve delay
+          setTimeout(() => {
+            navigate("/graph");
+          }, 2000);
           break;
         case playerValue > 21:
           setResult({ type: "dealer", message: "Player busts! Dealer wins!" });
