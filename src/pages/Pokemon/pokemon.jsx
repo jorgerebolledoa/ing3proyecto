@@ -1,4 +1,6 @@
 import React, { useState, useEffect, useRef } from "react";
+import { useNavigate } from "react-router-dom"; // Agrega esta línea
+
 
 const style = `
 body {
@@ -144,6 +146,8 @@ export default function PokemonGame() {
   const [imgSrc, setImgSrc] = useState('data:image/gif;base64,R0lGODlhAQABAAD/ACwAAAAAAQABAAACADs%3D');
   const choicesRef = useRef();
 
+  const navigate = useNavigate();
+
   // Cargar voz femenina
   useEffect(() => {
     const loadVoice = () => {
@@ -199,6 +203,12 @@ export default function PokemonGame() {
         setSelected(null);
         setMainClass("fetching");
       }, 3000);
+    }
+    if (name === gameData.correct.name ) {
+      // Si es correcto, espera 6 segundos y llama a handlePlay
+      setTimeout(() => {
+        navigate("/graph");
+      }, 2000);
     }
   };
 
