@@ -13,7 +13,6 @@ function App() {
         <Route path="/21" element={<Veintiuno />} />
       </Routes>
       <TrollButton />
-
     </div>
   )
 }

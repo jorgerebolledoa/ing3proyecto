@@ -1,10 +1,13 @@
 import { Button } from "../../components";
+import HorseRace from "../../components/HorseRace/HorseRace";
 
 function Home(){
     return (
-        <div>
-            <div>Home Page</div>
-            <Button></Button>
+        <div style={{ padding: 16 }}>
+            <HorseRace initialHorses={5} />
+            <div style={{ marginTop: 20 }}>
+                <Button />
+            </div>
         </div>
     )
 }
