@@ -20,4 +20,3 @@ If you are developing a production application, we recommend using TypeScript wi
 `pip install -r requirements.txt`
 `python server.py`
 
-hola
