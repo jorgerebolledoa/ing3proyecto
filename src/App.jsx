@@ -1,5 +1,5 @@
 import { Routes, Route } from 'react-router-dom';
-import {Home, Graph} from './pages';
+import {Home, Graph, Veintiuno} from './pages';
 import './App.css'
 import TrollButton from './Trollbutton';
 
@@ -10,6 +10,7 @@ function App() {
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/graph" element={<Graph />} />
+        <Route path="/21" element={<Veintiuno />} />
       </Routes>
       <TrollButton />
 
