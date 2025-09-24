@@ -180,6 +180,8 @@ export default function PokemonGame() {
 
   const handlePlay = async () => {
     setLoading(true);
+    setMainClass("fetching"); // Reiniciamos el estado anterior, habia un bug en el que spoileaba el siguiente
+    setSelected(null);
     const data = await getPokeData();
     setGameData(data);
     setLoading(false);
