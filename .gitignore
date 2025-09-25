@@ -12,6 +12,9 @@ dist
 dist-ssr
 *.local
 
+__pycache__
+TS-NOX-202.png
+
 # Editor directories and files
 .vscode/*
 !.vscode/extensions.json
