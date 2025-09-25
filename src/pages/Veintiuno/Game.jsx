@@ -128,7 +128,7 @@ function Game() {
   const dealerValue = calculateHandValue(dealerHand);
 
   return (
-    <div className="bg-slate-900 container mx-auto p-4">
+    <div className="bg-slate-900 container mx-auto p-12">
       <h1 className="text-4xl text-center mb-4">Blackjack</h1>
 
       {gameOver && <Blackjack.Results result={result} />}
