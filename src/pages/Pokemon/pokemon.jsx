@@ -213,7 +213,7 @@ export default function PokemonGame() {
   };
 
   return (
-    <>
+    <div className="p-8">
       <style>{style}</style>
       <link href="https://fonts.googleapis.com/css2?family=Bangers&display=swap" rel="stylesheet" />
       <main className={mainClass + (loading ? " fetching" : "")}>
@@ -271,6 +271,6 @@ export default function PokemonGame() {
           </div>
         </section>
       </main>
-    </>
+    </div>
   );
 }

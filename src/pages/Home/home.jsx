@@ -3,8 +3,8 @@ import HorseRace from "../HorseRace/HorseRace";
 
 function Home(){
     return (
-        <div>
-            <div>
+        <div className="p-8">
+            <div >
                 <Button type="submit" text="Grafico" navigate="/graph" />
                 <TrollButton />
             </div>
