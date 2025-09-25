@@ -5,7 +5,7 @@ export default function GamesMenu() {
   const navigate = useNavigate();
 
   return (
-    <div style={{ maxWidth: 720, margin: "2rem auto", textAlign: "center" }}>
+    <div  style={{ maxWidth: 720, margin: "2rem auto", textAlign: "center" }}>
       <h1 style={{ marginBottom: 16 }}>Selecciona un juego</h1>
       <div style={{ display: "grid", gridTemplateColumns: "1fr 1fr", gap: 12 }}>
         {/* <button onClick={() => navigate("/")} style={{ padding: 12 }}>Home</button> */}

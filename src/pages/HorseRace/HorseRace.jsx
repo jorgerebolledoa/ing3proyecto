@@ -148,7 +148,7 @@ function HorseRace({ initialHorses = DEFAULT_HORSES }) {
   };
 
   return (
-    <div style={{ maxWidth: 900, margin: "1rem auto", fontFamily: "system-ui, sans-serif" }}>
+    <div className="p-8" style={{ maxWidth: 900, margin: "1rem auto", fontFamily: "system-ui, sans-serif" }}>
       <h2 style={{ textAlign: "center" }}>Carrera de Caballos</h2>
 
       <div style={{ display: "flex", gap: 12, alignItems: "center", justifyContent: "center", marginBottom: 8 }}>

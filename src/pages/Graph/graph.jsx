@@ -55,8 +55,8 @@ function Graph() {
     };
 
     return (
-        <div>
-            <h1 className="text-3xl font-bold mb-10">Generador de Gráficos NOX</h1>
+        <div className="p-8">
+            <h1 className="text-3xl font-bold mb-10 ">Generador de Gráficos NOX</h1>
             <form className="flex flex-col gap-10" onSubmit={handleSubmit}>
                 <div className="flex flex-row gap-10">
                     <div className="flex flex-col gap-2 flex-1">
