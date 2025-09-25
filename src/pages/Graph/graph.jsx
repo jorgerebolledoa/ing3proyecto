@@ -87,7 +87,7 @@ function Graph() {
                 </div>
             </form>
             <div className="mt-10">
-                <Button type="submit" navigate="/games" text={"Menu"}></Button>
+                <Button type="submit" navigate="/" text={"Menu"}></Button>
             </div>
             <div style={{ marginTop: '20px', textAlign: 'center' }}>
                 {isLoading && <p>Cargando gráfico...</p>}
