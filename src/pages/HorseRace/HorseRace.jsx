@@ -1,5 +1,6 @@
 import { useState, useEffect, useRef } from "react";
 import { useNavigate } from "react-router-dom";
+import { Button } from "../../components";
 import "./HorseRace.css";
 
 const TRACK_LENGTH = 40;
@@ -213,6 +214,10 @@ function HorseRace({ initialHorses = DEFAULT_HORSES }) {
             <strong>{resultMessage}</strong>
           </div>
         )}
+      </div>
+
+      <div className="mt-10">
+        <Button type="submit" navigate="/games" text={"Menu"}></Button>
       </div>
     </div>
   );

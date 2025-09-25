@@ -1,5 +1,5 @@
 import React from "react";
-import Card from "../Card.jsx";
+import { Blackjack } from "../../index.jsx";
 
 const Hands = ({ playerHand, dealerHand, playerValue, dealerValue, score }) => {
   return (
@@ -18,7 +18,7 @@ const Hands = ({ playerHand, dealerHand, playerValue, dealerValue, score }) => {
         <h3 className="text-xl mb-2">Your Hand (Value: {playerValue})</h3>
         <div className="flex justify-center gap-2">
           {playerHand.map((card, index) => (
-            <Card key={index} card={card} />
+            <Blackjack.Card key={index} card={card} />
           ))}
         </div>
       </div>
@@ -28,7 +28,7 @@ const Hands = ({ playerHand, dealerHand, playerValue, dealerValue, score }) => {
         <h3 className="text-xl mb-2">Dealer's Hand (Value: {dealerValue})</h3>
         <div className="flex justify-center gap-2">
           {dealerHand.map((card, index) => (
-            <Card key={index} card={card} />
+            <Blackjack.Card key={index} card={card} />
           ))}
         </div>
       </div>

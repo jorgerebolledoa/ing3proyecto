@@ -9,8 +9,8 @@ function Graph() {
     const [startDate, setStartDate] = useState('');
     const [endDate, setEndDate] = useState('');
 
-    const minDateTime = "2020-01-01T00:00";
-    const maxDateTime = "2020-12-31T23:59";
+    const minDateTime = "2020-01-01T03:00";
+    const maxDateTime = "2020-12-31T23:00";
 
     const handleSubmit = async (event) => {
         event.preventDefault();
@@ -87,7 +87,7 @@ function Graph() {
                 </div>
             </form>
             <div className="mt-10">
-                <Button type="submit" navigate="/" text={"Home"}></Button>
+                <Button type="submit" navigate="/games" text={"Menu"}></Button>
             </div>
             <div style={{ marginTop: '20px', textAlign: 'center' }}>
                 {isLoading && <p>Cargando gráfico...</p>}

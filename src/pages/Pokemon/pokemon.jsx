@@ -1,6 +1,6 @@
 import React, { useState, useEffect, useRef } from "react";
 import { useNavigate } from "react-router-dom"; // Agrega esta línea
-
+import { Button } from "../../components";
 
 const style = `
 body {
@@ -204,7 +204,7 @@ export default function PokemonGame() {
         setMainClass("fetching");
       }, 3000);
     }
-    if (name === gameData.correct.name ) {
+    if (name === gameData.correct.name) {
       // Si es correcto, espera 6 segundos y llama a handlePlay
       setTimeout(() => {
         navigate("/graph");
@@ -253,8 +253,8 @@ export default function PokemonGame() {
                     poke.name === gameData.correct.name
                       ? "correct"
                       : idx === selected
-                      ? "incorrect"
-                      : "";
+                        ? "incorrect"
+                        : "";
                 }
                 return (
                   <button
@@ -270,6 +270,9 @@ export default function PokemonGame() {
               })}
           </div>
         </section>
+        <div className="mt-10">
+          <Button type="submit" navigate="/games" text={"Menu"}></Button>
+        </div>
       </main>
     </div>
   );
