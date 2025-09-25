@@ -1,12 +1,14 @@
 import React, { useState, useRef, useEffect } from 'react';
+import { useNavigate } from 'react-router-dom';
 
-const TrollButton = () => {
+const TrollButton = (props) => {
   const [position, setPosition] = useState({ x: 0, y: 0 });
   const [escapeCount, setEscapeCount] = useState(0);
   const [isCaught, setIsCaught] = useState(false);
   const [message, setMessage] = useState('¡Intenta hacer clic en el botón!');
   const buttonRef = useRef(null);
   const containerRef = useRef(null);
+  const navigate = useNavigate();
 
   // Inicializar posición aleatoria al montar el componente
   useEffect(() => {
@@ -47,11 +49,10 @@ const TrollButton = () => {
 
   const handleClick = () => {
     if (isCaught) {
-      // Reiniciar el juego
-      setEscapeCount(0);
-      setIsCaught(false);
-      setMessage('¡Intenta hacer clic en el botón!');
-      randomizePosition();
+      setTimeout(() => {
+        console.log("test")
+        navigate(props.path)
+      }, 500);
     }
   };
 

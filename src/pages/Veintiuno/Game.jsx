@@ -5,6 +5,7 @@ import Results from "./components/Results.jsx";
 import Actions from "./components/Actions.jsx";
 import Hands from "./components/Hands.jsx";
 import { calculateHandValue } from "./utility/calculateHandValue";
+import { Button } from "../../components/index.jsx";
 
 function Game() {
   const navigate = useNavigate();
@@ -148,6 +149,9 @@ function Game() {
         dealerValue={dealerValue}
         score={score}
       />
+      <div className="mt-10">
+        <Button type="submit" navigate="/games" text={"Menu"}></Button>
+      </div>
     </div>
   );
 }

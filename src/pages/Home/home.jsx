@@ -5,8 +5,7 @@ function Home(){
     return (
         <div>
             <div>
-                <Button type="submit" text="Grafico" navigate="/graph" />
-                <TrollButton />
+                <TrollButton path="/games" />
             </div>
         </div>
     )
