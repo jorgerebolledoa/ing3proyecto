@@ -1,5 +1,5 @@
 import React from "react";
-import Card from "./Card";
+import { Blackjack } from "../../index.jsx";
 
 const Hand = ({ cards, title, handValue, score }) => {
   return (
@@ -10,7 +10,7 @@ const Hand = ({ cards, title, handValue, score }) => {
       </h2>
       <div className="flex flex-col items-center sm:flex-row gap-1">
         {cards.map((card, index) => (
-          <Card key={index} card={card} />
+          <Blackjack.Card key={index} card={card} />
         ))}
       </div>
     </div>

@@ -1,11 +1,9 @@
 import React, { useState, useEffect } from "react";
 import { useNavigate } from "react-router-dom";
 import { combinations } from "../../assets/CardDeck";
-import Results from "./components/Results.jsx";
-import Actions from "./components/Actions.jsx";
-import Hands from "./components/Hands.jsx";
-import { calculateHandValue } from "./utility/calculateHandValue";
-import { Button } from "../../components/index.jsx";
+import { calculateHandValue } from "../../assets/calculateHandValue";
+import { Button, Blackjack } from "../../components/index.jsx";
+import Hands from "../../components/Blackjack/Hands/Hands.jsx";
 
 function Game() {
   const navigate = useNavigate();
@@ -133,9 +131,9 @@ function Game() {
     <div className="bg-slate-900 container mx-auto p-4">
       <h1 className="text-4xl text-center mb-4">Blackjack</h1>
 
-      {gameOver && <Results result={result} />}
+      {gameOver && <Blackjack.Results result={result} />}
 
-      <Actions
+      <Blackjack.Actions
         dealCardToPlayer={dealCardToPlayer}
         playerStand={playerStand}
         resetGame={resetGame}
